@@ -4,7 +4,7 @@ import random
 from tkinter import *
 import string
 window = Tk()
-window.config(background="blue")
+window.config(background="red")
 window.title("QRCode Generator")
 def Generator():
     qr = qrcode.QRCode(
@@ -31,19 +31,21 @@ def clear():
     
 label = Label(window,
               text="Enter the link you want the QRCode to be generated from in the field below:",
-              fg="red",
-              bg="green")
+              fg="#000",
+              bg="red")
 entry = Entry(window, 
-              fg="grey",
-              bg="green")
+              fg="#000",
+              bg="grey")
 submit = Button(window,
-                bg="green",
-                fg="#000",
+                bg="#000",
+                fg="red",
                 text= "Submit",
                 command=Generator)
 clearBt = Button(window,
                text ="Clear",
-               command=clear)
+               command=clear,
+               bg="red",
+               fg="#000")
 
 label.pack()
 entry.pack()
