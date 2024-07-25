@@ -21,7 +21,7 @@ def Generator():
     
     qr.add_data(data)
     qr.make(fit = True)
-    img = qr.make_image(fill = "black", back_color = "pink", front_color="green")
+    img = qr.make_image(fill = "black", back_color = "white")
     source = string.ascii_letters + string.ascii_lowercase + string.ascii_uppercase
     save = ""
     file_name = entry2.get()
